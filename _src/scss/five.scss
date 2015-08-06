@@ -1,0 +1,178 @@
+
+$grey: #3C3F49;
+$coral: #EC685B;
+
+$bold: 'DINBold';
+$regular: 'DINRegular';
+
+@font-face {
+    font-family: 'DINRegular';
+    src: url(/fonts/din-regular-webfont.eot);
+    src: local('?'), url(/fonts/din-regular-webfont.woff) format('woff'), url(/fonts/din-regular-webfont.ttf) format('truetype'), url(/fonts/din-regular-webfont.svg#webfontfLFgafto) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINBold';
+    src: url(/fonts/din-bold-webfont.eot);
+    src: local('?'), url(/fonts/din-bold-webfont.woff) format('woff'), url(/fonts/din-bold-webfont.ttf) format('truetype'), url(/fonts/din-bold-webfont.svg#webfontNVxOgUMj) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+body {
+    background: $grey;
+    color: $coral;
+    font-family: Arial;
+    text-align:center;
+    font-family: $regular;
+}
+
+strong {
+    font-family: $bold;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    text-align: right;
+    width: 500px;
+    margin: -20px auto;
+    font-size: 18px;
+}
+
+$rotateDuration: 0.8s;
+
+#intro, #container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: $grey;
+
+    opacity: 1;
+    &.hidden { opacity: 0; }
+    -webkit-transition: opacity linear $rotateDuration;
+
+    #logo {
+        transform: rotate(0);
+        margin: 50px 0 0 0;
+        width: 500px;
+        -webkit-transition: all linear $rotateDuration;
+    }
+
+    #logo.zoomed, #logo-outline {
+        transform: rotate(-45deg);
+        width: 1500px;
+        margin: -330px 50px 50px -600px;
+    }
+
+}
+
+#container {
+    z-index: 1;
+}
+
+#intro {
+    z-index: 2;
+}
+
+// #intro.zoomed {
+
+
+//     #logo {
+//         -webkit-transform: rotate(-45deg);
+//         width: 1500px;
+//         margin: -330px 50px 50px -600px;
+//     }
+
+// }
+
+
+#content {
+    position: absolute;
+    width: 420px;
+    top: 150px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: left;
+    font-size: 14px;
+
+    .section {
+        padding: 20px 0;
+        border-bottom: 2px solid $coral;
+
+        &:last-child{ border: none; }
+
+        .logo {
+            float:left;
+            margin-right: 40px;
+        }
+
+        .contact, p {
+            line-height: 1.3;
+        }
+
+        .contact {
+            margin: 10px 0;
+        }
+
+        .agent {
+            width: 50%;
+            float:left;
+
+            img {
+                height: 45px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .text {
+            height: 191px;
+            position: relative;
+            margin-left: 140px;
+
+            .coming-soon, .hashtag {
+                position: absolute;
+                bottom: 0;
+                font-size: 13px;
+            }
+            .coming-soon {
+                left: 0;
+            }
+            .hashtag {
+                right: 0;
+            }
+
+        }
+
+        &.third {
+            position: relative;
+            .logo1, .logo2 {
+                position: absolute;
+            }
+            .logo1 {
+                left: 180px;
+                top: 19px;
+                height: 14px;
+            }
+            .logo2 {
+                right: 0;
+                height: 26px;
+                top: 14px;
+            }
+        }
+
+    }
+}
