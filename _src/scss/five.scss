@@ -48,11 +48,20 @@ h1 {
 h2 {
     text-align: right;
     width: 500px;
+    max-width: 90%;
     margin: -20px auto;
     font-size: 18px;
+
+    @media(max-width: 475px) {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
-$rotateDuration: 0.8s;
+
+
+$rotateDuration: 1.8s;
+$fadeDuration: 1s;
 
 #intro, #container {
     width: 100%;
@@ -69,12 +78,15 @@ $rotateDuration: 0.8s;
         transform: rotate(0);
         margin: 50px 0 0 0;
         width: 500px;
-        -webkit-transition: all linear $rotateDuration;
+        max-width: 90%;
+//        -webkit-transition: all ease-out $rotateDuration;
+        -webkit-transition: all 1800ms cubic-bezier(0.390, 0.575, 0.360, 0.995);
     }
 
     #logo.zoomed, #logo-outline {
         transform: rotate(-45deg);
         width: 1500px;
+        max-width: none;
         margin: -330px 50px 50px -600px;
     }
 
@@ -82,22 +94,16 @@ $rotateDuration: 0.8s;
 
 #container {
     z-index: 1;
+    @media(max-width: 960px) {
+        #logo-outline {
+            display: none;
+        }
+    }
 }
 
 #intro {
     z-index: 2;
 }
-
-// #intro.zoomed {
-
-
-//     #logo {
-//         -webkit-transform: rotate(-45deg);
-//         width: 1500px;
-//         margin: -330px 50px 50px -600px;
-//     }
-
-// }
 
 
 #content {

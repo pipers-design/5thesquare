@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: '_src/scss/',
         src: ['*.scss', '!_*'],
-        dest: 'deploy/css/',
+        dest: 'css/',
         ext: '.css'
       }
     },
@@ -37,13 +37,13 @@ module.exports = function(grunt) {
         src: [
           '_src/js/five.js',
         ],
-        dest: 'deploy/js/five.js'
+        dest: 'js/five.js'
       }
     },
 
     uglify: {
         js: {
-            files: { 'deploy/js/five.min.js': 'deploy/js/five.js' },
+            files: { 'js/five.min.js': 'js/five.js' },
             options: {
                 preserveComments: false
             }

@@ -34,8 +34,13 @@ h1 {
 h2 {
   text-align: right;
   width: 500px;
+  max-width: 90%;
   margin: -20px auto;
   font-size: 18px; }
+  @media (max-width: 475px) {
+    h2 {
+      text-align: center;
+      margin-top: 20px; } }
 
 #intro, #container {
   width: 100%;
@@ -44,21 +49,26 @@ h2 {
   top: 0;
   background: #3C3F49;
   opacity: 1;
-  -webkit-transition: opacity linear 0.8s; }
+  -webkit-transition: opacity linear 1.8s; }
   #intro.hidden, #container.hidden {
     opacity: 0; }
   #intro #logo, #container #logo {
     transform: rotate(0);
     margin: 50px 0 0 0;
     width: 500px;
-    -webkit-transition: all linear 0.8s; }
+    max-width: 90%;
+    -webkit-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995); }
   #intro #logo.zoomed, #intro #logo-outline, #container #logo.zoomed, #container #logo-outline {
     transform: rotate(-45deg);
     width: 1500px;
+    max-width: none;
     margin: -330px 50px 50px -600px; }
 
 #container {
   z-index: 1; }
+  @media (max-width: 960px) {
+    #container #logo-outline {
+      display: none; } }
 
 #intro {
   z-index: 2; }
