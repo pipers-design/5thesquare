@@ -25,6 +25,12 @@ body {
   text-align: center;
   font-family: "DINRegular"; }
 
+a,
+a:link,
+a:visited,
+a:active {
+  color: inherit; }
+
 strong {
   font-family: "DINBold"; }
 
@@ -49,7 +55,10 @@ h2 {
   top: 0;
   background: #3C3F49;
   opacity: 1;
-  -webkit-transition: opacity linear 1.8s; }
+  -moz-transition: opacity linear 1.8s;
+  -o-transition: opacity linear 1.8s;
+  -webkit-transition: opacity linear 1.8s;
+  transition: opacity linear 1.8s; }
   #intro.hidden, #container.hidden {
     opacity: 0; }
   #intro #logo, #container #logo {
@@ -57,7 +66,10 @@ h2 {
     margin: 50px 0 0 0;
     width: 500px;
     max-width: 90%;
-    -webkit-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995); }
+    -moz-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995);
+    -o-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995);
+    -webkit-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995);
+    transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995); }
   #intro #logo.zoomed, #intro #logo-outline, #container #logo.zoomed, #container #logo-outline {
     transform: rotate(-45deg);
     width: 1500px;

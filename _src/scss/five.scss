@@ -20,6 +20,13 @@ $regular: 'DINRegular';
     font-style: normal;
 }
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -35,6 +42,13 @@ body {
     font-family: Arial;
     text-align:center;
     font-family: $regular;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: inherit;
 }
 
 strong {
@@ -59,7 +73,6 @@ h2 {
 }
 
 
-
 $rotateDuration: 1.8s;
 $fadeDuration: 1s;
 
@@ -72,15 +85,14 @@ $fadeDuration: 1s;
 
     opacity: 1;
     &.hidden { opacity: 0; }
-    -webkit-transition: opacity linear $rotateDuration;
+    @include transition(opacity linear $rotateDuration);
 
     #logo {
         transform: rotate(0);
         margin: 50px 0 0 0;
         width: 500px;
         max-width: 90%;
-//        -webkit-transition: all ease-out $rotateDuration;
-        -webkit-transition: all 1800ms cubic-bezier(0.390, 0.575, 0.360, 0.995);
+        @include transition(all 1800ms cubic-bezier(0.390, 0.575, 0.360, 0.995));
     }
 
     #logo.zoomed, #logo-outline {
