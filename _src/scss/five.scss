@@ -88,6 +88,8 @@ $fadeDuration: 1s;
     @include transition(opacity linear $rotateDuration);
 
     #logo {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
         transform: rotate(0);
         margin: 50px 0 0 0;
         width: 500px;
@@ -96,6 +98,8 @@ $fadeDuration: 1s;
     }
 
     #logo.zoomed, #logo-outline {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
         width: 1500px;
         max-width: none;

@@ -62,6 +62,8 @@ h2 {
   #intro.hidden, #container.hidden {
     opacity: 0; }
   #intro #logo, #container #logo {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
     transform: rotate(0);
     margin: 50px 0 0 0;
     width: 500px;
@@ -71,6 +73,8 @@ h2 {
     -webkit-transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995);
     transition: all 1800ms cubic-bezier(0.39, 0.575, 0.36, 0.995); }
   #intro #logo.zoomed, #intro #logo-outline, #container #logo.zoomed, #container #logo-outline {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     width: 1500px;
     max-width: none;
