@@ -135,11 +135,20 @@ $fadeDuration: 1s;
 
         .contact {
             margin: 10px 0;
+            .email {
+                display: block;
+            }
+
+            @media(max-width: 440px) {
+                .tel { display: block; }
+            }
+
         }
 
         .agent {
-            width: 50%;
+            width: 45%;
             float:left;
+            padding-right: 5%;
 
             img {
                 height: 45px;
@@ -165,11 +174,11 @@ $fadeDuration: 1s;
             }
 
             @media(max-width: 440px) {
-                height: 220px;
+                height: 230px;
                 .coming-soon, .hashtag {
                     position: relative;
                     display: block;
-                    margin: 5px 0;
+                    margin: 10px 0;
                 }
             }
 

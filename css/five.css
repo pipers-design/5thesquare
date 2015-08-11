@@ -90,9 +90,15 @@ h2 {
       line-height: 1.3; }
     #content .section .contact {
       margin: 10px 0; }
+      #content .section .contact .email {
+        display: block; }
+      @media (max-width: 440px) {
+        #content .section .contact .tel {
+          display: block; } }
     #content .section .agent {
-      width: 50%;
-      float: left; }
+      width: 45%;
+      float: left;
+      padding-right: 5%; }
       #content .section .agent img {
         height: 45px;
         margin-bottom: 10px; }
@@ -110,11 +116,11 @@ h2 {
         right: 0; }
       @media (max-width: 440px) {
         #content .section .text {
-          height: 220px; }
+          height: 230px; }
           #content .section .text .coming-soon, #content .section .text .hashtag {
             position: relative;
             display: block;
-            margin: 5px 0; } }
+            margin: 10px 0; } }
     #content .section.third {
       position: relative; }
       #content .section.third .logo1, #content .section.third .logo2 {
