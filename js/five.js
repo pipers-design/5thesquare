@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
 
-//    return;
     setTimeout(function() {
 
         // start the css transitions

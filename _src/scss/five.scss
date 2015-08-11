@@ -76,40 +76,28 @@ h2 {
 $rotateDuration: 1.8s;
 $fadeDuration: 1s;
 
+
+/** MOBILE FIRST! **/
+
 #intro, #container {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     background: $grey;
 
     opacity: 1;
     &.hidden { opacity: 0; }
-    @include transition(opacity linear $rotateDuration);
-
-    #logo {
-        -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-        transform: rotate(0);
-        margin: 50px 0 0 0;
-        width: 500px;
-        max-width: 90%;
-        @include transition(all 1800ms cubic-bezier(0.390, 0.575, 0.360, 0.995));
-    }
-
-    #logo.zoomed, #logo-outline {
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        width: 1500px;
-        max-width: none;
-        margin: -330px 50px 50px -600px;
-    }
+    @include transition(opacity linear $fadeDuration);
 
 }
 
+
 #container {
     z-index: 1;
+
+
+    // desktop, shouldn't be in this section really
     @media(max-width: 960px) {
         #logo-outline {
             display: none;
@@ -123,11 +111,10 @@ $fadeDuration: 1s;
 
 
 #content {
-    position: absolute;
+
     width: 420px;
-    top: 150px;
-    left: 50%;
-    margin-left: -200px;
+    margin: 50px auto;
+    max-width: 90%;
     text-align: left;
     font-size: 14px;
 
@@ -177,6 +164,15 @@ $fadeDuration: 1s;
                 right: 0;
             }
 
+            @media(max-width: 440px) {
+                height: 220px;
+                .coming-soon, .hashtag {
+                    position: relative;
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
+
         }
 
         &.third {
@@ -197,4 +193,52 @@ $fadeDuration: 1s;
         }
 
     }
+
 }
+
+#intro {
+    #logo {
+        max-width: 90%;
+        margin: 50px 0 0 0;
+        width: 500px;
+    }
+}
+
+/** FANCY DESKTOP VERSION **/
+
+@media (min-width: 960px) {
+
+    #intro, #container {
+        width: 100%;
+        height: 100%;
+
+        #logo {
+            -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+            transform: rotate(0);
+            @include transition(all 1800ms cubic-bezier(0.390, 0.575, 0.360, 0.995));
+        }
+
+        #logo.zoomed, #logo-outline {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width: 1500px;
+            max-width: none;
+            margin: -330px 50px 50px -600px;
+        }
+
+    }
+
+
+    #content {
+        position: absolute;
+        width: 420px;
+        top: 150px;
+        left: 50%;
+        margin-top: 0;
+        margin-left: -200px;
+    }
+
+}
+
