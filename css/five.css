@@ -103,7 +103,7 @@ h2 {
         height: 45px;
         margin-bottom: 10px; }
     #content .section .text {
-      height: 191px;
+      min-height: 191px;
       position: relative;
       margin-left: 140px; }
       #content .section .text .coming-soon, #content .section .text .hashtag {
@@ -116,7 +116,7 @@ h2 {
         right: 0; }
       @media (max-width: 440px) {
         #content .section .text {
-          height: 230px; }
+          min-height: 230px; }
           #content .section .text .coming-soon, #content .section .text .hashtag {
             position: relative;
             display: block;

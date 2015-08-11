@@ -157,7 +157,7 @@ $fadeDuration: 1s;
         }
 
         .text {
-            height: 191px;
+            min-height: 191px;
             position: relative;
             margin-left: 140px;
 
@@ -174,7 +174,7 @@ $fadeDuration: 1s;
             }
 
             @media(max-width: 440px) {
-                height: 230px;
+                min-height: 230px;
                 .coming-soon, .hashtag {
                     position: relative;
                     display: block;
