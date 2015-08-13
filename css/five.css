@@ -20,7 +20,7 @@
 
 body {
   background: #3C3F49;
-  color: #EC685B;
+  color: #15af97;
   font-family: Arial;
   text-align: center;
   font-family: "DINRegular"; }
@@ -79,7 +79,7 @@ h2 {
   font-size: 14px; }
   #content .section {
     padding: 20px 0;
-    border-bottom: 2px solid #EC685B; }
+    border-bottom: 2px solid #15af97; }
     #content .section:last-child {
       border: none; }
     #content .section .logo {
