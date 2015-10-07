@@ -25,25 +25,13 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['_src/js/*.js'],
-        tasks: ['concat', 'uglify']
-      }
-    },
-
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: [
-          '_src/js/five.js',
-        ],
-        dest: 'js/five.js'
+        tasks: ['uglify']
       }
     },
 
     uglify: {
         js: {
-            files: { 'js/five.min.js': 'js/five.js' },
+            files: { 'js/five.min.js': '_src/js/five.js' },
             options: {
                 preserveComments: false
             }

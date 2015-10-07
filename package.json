@@ -1,7 +1,8 @@
 {
   "name": "5thesquare",
   "version": "0.1.0",
-  "description": "",
+  "description": "Website for 5thesquare.co.uk",
+  "private": true,
   "dependencies": {
   },
   "devDependencies": {
